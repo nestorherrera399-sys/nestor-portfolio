@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -50,6 +50,7 @@
 
     .btn:hover {
       background: #1d4ed8;
+      transform: scale(1.05);
     }
 
     section {
@@ -71,6 +72,12 @@
       margin: 15px 0;
       border-radius: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
     .grid {
@@ -99,24 +106,24 @@
 
 <header>
   <h1>Nestor Herrera</h1>
-  <p>Web Developer | HTML • CSS • JavaScript</p>
+  <p>Frontend Web Developer | HTML • CSS • JavaScript</p>
   <a class="btn" href="https://github.com/nestorherrera399-sys" target="_blank">
-    Ver GitHub
+    View GitHub
   </a>
 </header>
 
 <section>
-  <h2>Sobre mí</h2>
+  <h2>About Me</h2>
   <div class="card">
     <p>
-       I am a Software Engineering student specializing in Artificial Intelligence at SENATI (2021 - 2026).
+      I am a Software Engineering student specializing in Artificial Intelligence at SENATI (2021 - 2026).
       I build modern, responsive and clean websites using HTML, CSS and JavaScript.
     </p>
   </div>
 </section>
 
 <section>
-  <h2>Servicios</h2>
+  <h2>Services</h2>
   <div class="grid">
     <div class="card">Modern Website Development</div>
     <div class="card">Landing Pages for Businesses</div>
@@ -126,26 +133,27 @@
 </section>
 
 <section>
-  <h2>Proyectos</h2>
+  <h2>Projects</h2>
   <div class="card">
-    <strong>Portfolio Web</strong>
-    <p>Proyecto personal desarrollado con HTML y CSS y publicado en GitHub Pages.</p>
+    <strong>Portfolio Website</strong>
+    <p>Personal project built with HTML, CSS and JavaScript and hosted on GitHub Pages.</p>
   </div>
 </section>
 
 <section>
-  <h2>Contacto</h2>
+  <h2>Contact</h2>
   <div class="card">
-    <p>Email: nestorherrera399@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/nestorherrera399-sys">perfil</a></p>
+    <p>Email: nestorherrera399@example.com</p>
+    <p>Available for freelance work worldwide</p>
   </div>
 </section>
 
 <footer>
-  © 2026 Nestor Herrera — Disponible para trabajos freelance en Fiverr
+  © 2026 Nestor Herrera — Available for freelance work on Fiverr
 </footer>
+
+<!-- ANIMATIONS -->
 <script>
-  // Simple fade-in animation on scroll
   const cards = document.querySelectorAll('.card');
 
   const observer = new IntersectionObserver(entries => {
@@ -163,7 +171,7 @@
     card.style.transition = "0.6s ease";
     observer.observe(card);
   });
-</script>  
+</script>
 
 </body>
 </html>
