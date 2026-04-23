@@ -109,8 +109,8 @@
   <h2>Sobre mí</h2>
   <div class="card">
     <p>
-      Soy estudiante de Ingeniería de Software con Inteligencia Artificial en SENATI (2021 - 2026).
-      Me enfoco en el desarrollo de páginas web modernas, limpias y funcionales.
+       I am a Software Engineering student specializing in Artificial Intelligence at SENATI (2021 - 2026).
+      I build modern, responsive and clean websites using HTML, CSS and JavaScript.
     </p>
   </div>
 </section>
@@ -118,10 +118,10 @@
 <section>
   <h2>Servicios</h2>
   <div class="grid">
-    <div class="card">Creación de páginas web modernas</div>
-    <div class="card">Landing pages para negocios</div>
-    <div class="card">Portafolios personales</div>
-    <div class="card">Corrección y mejora de código web</div>
+    <div class="card">Modern Website Development</div>
+    <div class="card">Landing Pages for Businesses</div>
+    <div class="card">Personal Portfolio Websites</div>
+    <div class="card">Code Fixing & Optimization</div>
   </div>
 </section>
 
@@ -144,6 +144,26 @@
 <footer>
   © 2026 Nestor Herrera — Disponible para trabajos freelance en Fiverr
 </footer>
+<script>
+  // Simple fade-in animation on scroll
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  });
+
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(20px)";
+    card.style.transition = "0.6s ease";
+    observer.observe(card);
+  });
+</script>  
 
 </body>
 </html>
